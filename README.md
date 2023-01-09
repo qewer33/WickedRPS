@@ -1,5 +1,7 @@
 <div align="center">
+
 ![banner](https://github.com/qewer33/WickedRPS/blob/main/assets/logo.png?raw=true)
+
 </div>
 
 Play it over at: https://rps.qewer.dev
