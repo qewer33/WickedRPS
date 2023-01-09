@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap");
+
+:root {
+    --foreground: white;
+    --background-primary: #242424;
+    --background-secondary: #323232;
+    --accent-primary: #c53b70;
+    --accent-secondary: #9b2f58;
+    --accent-tertiary: #ff70a7;
+
+    --radius-normal: 8px;
+    --radius-big: 15px;
+}
+
+* {
+    font-family: "Inter", "Arial", sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Arial", sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+p,
+h1 {
+    color: var(--foreground);
+}
+
+a {
+    color: var(--accent-tertiary);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: var(--background-primary);
+}
+
+#header img {
+    object-fit: contain;
+    height: 70%;
+    margin-left: 15px;
+}
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+}
+
+.tool-button {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.tool-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tool-button:disabled {
+    opacity: 50%;
+}
+
+.tool-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.button {
+    width: auto;
+    height: 40px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    color: var(--foreground);
+    background-color: var(--accent-primary);
+    border-radius: var(--radius-normal);
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: var(--accent-secondary);
+}
+
+.button:disabled {
+    opacity: 50%;
+}
+
+.seperator {
+    width: 3px;
+    height: 40px;
+    background-color: var(--background-secondary);
+    border-radius: 999px;
+    margin-left: 10px;
+}
+
+#timer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#timer-div h1 {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 3vw;
+}
+
+#game-over-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 20px;
+    background-color: var(--background-primary);
+    border-radius: var(--radius-big);
+}
+
+#welcome-screen img {
+    object-fit: contain;
+    width: 80%;
+}
+
+#welcome-screen button {
+    margin-top: 30px;
+}
