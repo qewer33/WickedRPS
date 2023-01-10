@@ -9,7 +9,7 @@ class Game {
 
         for (let i in this.tiles) {
             let tile = this.tiles[i];
-            tile.display();
+            tile.display(this.tiles);
             tile.move = true;
 
             if (i == 0) {
