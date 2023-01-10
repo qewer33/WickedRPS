@@ -20,3 +20,7 @@ If you like this game and like what I do over at [my website](https://qewer.dev)
         border="0"
         alt="Buy Me a Coffee at ko-fi.com"
 /></a>
+
+![banner](https://github.com/qewer33/WickedRPS/blob/main/assets/screenshot_1.png?raw=true)
+
+![banner](https://github.com/qewer33/WickedRPS/blob/main/assets/screenshot.png?raw=true)
