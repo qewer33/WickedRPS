@@ -35,6 +35,8 @@ function setup() {
 
     editor = new Editor();
     game = new Game();
+
+    editor.start();
 }
 
 function draw() {

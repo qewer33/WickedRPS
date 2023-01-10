@@ -9,19 +9,19 @@ class Editor {
     }
 
     display() {
+        for (let i in this.tiles) {
+            let tile = this.tiles[i];
+            tile.move = false;
+            tile.display();
+        }
+
         if (this.eraser) {
             image(assets.images.delete, mouseX - TILE_SIZE / 2, mouseY - TILE_SIZE / 2, TILE_SIZE, TILE_SIZE);
         } else {
             this.tile.display();
             this.tile.type = this.selectedType;
-            this.tile.x = mouseX - TILE_SIZE / 2;
-            this.tile.y = mouseY - TILE_SIZE / 2;
-        }
-
-        for (let i in this.tiles) {
-            let tile = this.tiles[i];
-            tile.move = false;
-            tile.display();
+            this.tile.position.x = mouseX - TILE_SIZE / 2;
+            this.tile.position.y = mouseY - TILE_SIZE / 2;
         }
     }
 
@@ -58,5 +58,6 @@ class Editor {
         document.getElementById("win-images").children.forEach((element) => {
             element.style.display = "none";
         });
+        document.getElementById("rock").checked = true;
     }
 }

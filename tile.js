@@ -20,7 +20,7 @@ class Tile {
         this.acceleration = createVector(0, 0);
         this.velocity = p5.Vector.random2D();
         this.position = createVector(x, y);
-        this.maxspeed = 4;
+        this.maxspeed = 3.5;
         this.maxforce = 0.1;
     }
 
@@ -70,7 +70,7 @@ class Tile {
         // Arbitrarily weight these forces
         sep.mult(3.3);
         ali.mult(1.5);
-        coh.mult(0.6);
+        coh.mult(1.0);
         // Add the force vectors to acceleration
         this.applyForce(sep);
         this.applyForce(ali);
