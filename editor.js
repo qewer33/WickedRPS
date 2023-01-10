@@ -55,5 +55,8 @@ class Editor {
         document.getElementById("toolbar").childNodes.forEach((element) => {
             element.disabled = false;
         });
+        document.getElementById("win-images").children.forEach((element) => {
+            element.style.display = "none";
+        });
     }
 }

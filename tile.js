@@ -43,8 +43,8 @@ class Tile {
         if (this.move) {
             if (this.x > width) this.startX -= width;
             if (this.y > height) this.startY -= height;
-            if (this.x < 0) this.startX += width;
-            if (this.y < 0) this.startY += height;
+            if (this.x < 0 - TILE_SIZE) this.startX += width;
+            if (this.y < 0 - TILE_SIZE) this.startY += height;
             this.x = this.startX + xNoise * width - this.firstXNoise * width;
             this.y = this.startY + yNoise * height - this.firstYNoise * height;
             this.time += 0.0025;

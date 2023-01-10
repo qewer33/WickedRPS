@@ -1,3 +1,5 @@
+let canvas;
+
 let assets = {
     images: {},
 };
@@ -25,7 +27,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight - 60);
+    canvas = createCanvas(windowWidth, windowHeight - 60);
+    canvas.mouseClicked(canvasMouseClicked);
     noiseDetail(2, 1.2);
 
     grid = generateGrid();
@@ -56,8 +59,13 @@ function draw() {
     }
 }
 
-function mousePressed() {
+function canvasMouseClicked() {
     if (state == State.Editor && !welcomeScreen) editor.mousePressed();
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    grid = generateGrid();
 }
 
 function hideWelcomeScreen() {

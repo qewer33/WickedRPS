@@ -13,49 +13,62 @@
     <body>
         <main>
             <div id="header">
-                <img src="assets/logo.png" />
+                <img id="header-logo-img" src="assets/logo.png" />
                 <div style="flex-grow: 1"></div>
-                <div
-                    style="
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: end;
-                        margin-right: 10px;
-                    "
+                <a
+                    id="github-link"
+                    class="button"
+                    href="https://github.com/qewer33/WickedRPS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="height: 30px; text-decoration: none"
                 >
-                    <a
-                        href="https://github.com/qewer33/WickedRPS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="margin-bottom: 5px"
-                    >
-                        GitHub Repository
-                    </a>
-                    <p style="margin: 0; color: rgba(255, 255, 255, 0.3)">ALPHA v0.0.1</p>
-                </div>
+                    <img src="assets/github-logo.png" alt="scissors" />
+                    GitHub
+                </a>
             </div>
             <div id="toolbar">
-                <button class="tool-button" onclick="editor.changeType(TileType.Rock)">
+                <input id="rock" type="radio" name="radio" checked onclick="editor.changeType(TileType.Rock)" />
+                <label class="tool-button" for="rock">
                     <img src="assets/rock.png" alt="rock" />
-                </button>
-                <button class="tool-button" onclick="editor.changeType(TileType.Paper)">
+                </label>
+                <input id="paper" type="radio" name="radio" checked onclick="editor.changeType(TileType.Paper)" />
+                <label class="tool-button" for="paper">
                     <img src="assets/paper.png" alt="paper" />
-                </button>
-                <button class="tool-button" onclick="editor.changeType(TileType.Scissors)">
+                </label>
+                <input id="scissors" type="radio" name="radio" checked onclick="editor.changeType(TileType.Scissors)" />
+                <label class="tool-button" for="scissors">
                     <img src="assets/scissors.png" alt="scissors" />
+                </label>
+                <div class="separator"></div>
+                <input id="delete" type="radio" name="radio" checked onclick="editor.eraser = true" />
+                <label class="tool-button" for="delete">
+                    <img src="assets/cross-mark.png" alt="cross-mark" />
+                </label>
+                <button class="tool-button" onclick="editor.tiles = []">
+                    <img src="assets/clear.png" alt="scissors" />
                 </button>
+                <button class="tool-button" onclick="editor.randomizeTiles()">
+                    <img src="assets/randomize.png" alt="scissors" />
+                </button>
+                <!--
                 <button class="button" onclick="editor.eraser = true">Eraser</button>
                 <button class="button" onclick="tiles = []">Clear</button>
                 <button class="button" onclick="editor.randomizeTiles()">Randomize</button>
-                <div class="seperator"></div>
-                <button class="button" onclick="game.start()">Start Game</button>
+                -->
+                <div id="start-game-button-separator" class="separator"></div>
+                <button id="start-game-button" class="button" onclick="game.start()">Start Game</button>
             </div>
             <div id="timer-div">
                 <h1 id="time-label" style="font-family: 'JetBrains Mono', monospace">00:00:00 Elapsed</h1>
             </div>
             <div id="game-over-screen">
-                <h1 id="game-over-label">📜 Paper is Victorius!</h1>
+                <div id="win-images">
+                    <img id="win-image-rock" src="assets/rock.png" alt="rock" style="display: none" />
+                    <img id="win-image-paper" src="assets/paper.png" alt="paper" style="display: none" />
+                    <img id="win-image-scissors" src="assets/scissors.png" alt="scissors" style="display: none" />
+                </div>
+                <h1 id="game-over-label">Paper is Victorius!</h1>
                 <h1 id="game-over-time-label"></h1>
                 <button class="button" onclick="editor.start()">New Game</button>
             </div>
@@ -74,10 +87,6 @@
                     >. I really liked the idea so I decided to make a clone of it myself (although it's technically not
                     as good because it's lacking flocking but I'm a high school student and idk any cellular automata
                     concepts give me a break).
-                </p>
-                <p>
-                    Also this might not work very well on mobile, a computer or at least something with a screen larger
-                    than 8" is recommended.
                 </p>
                 <p>
                     If you like this game and like what I do over at

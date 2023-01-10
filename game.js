@@ -61,9 +61,10 @@ class Game {
         document.getElementById("time-label").innerText = "00:00:00 Elapsed";
         document.getElementById("game-over-screen").style.display = "flex";
         let winMessage = "";
-        if (this.winningTile == TileType.Rock) winMessage = "🪨 Rock";
-        if (this.winningTile == TileType.Paper) winMessage = "📜 Paper";
-        if (this.winningTile == TileType.Scissors) winMessage = "✂️ Scissors";
+        if (this.winningTile == TileType.Rock) winMessage = "Rock";
+        if (this.winningTile == TileType.Paper) winMessage = "Paper";
+        if (this.winningTile == TileType.Scissors) winMessage = "Scissors";
+        document.getElementById("win-image-" + winMessage.toLowerCase()).style.display = "block";
         document.getElementById("game-over-label").innerText = winMessage + " is Victorius!";
         document.getElementById("game-over-time-label").innerText = "Game finished in: " + this.elapsedTimeText;
     }
