@@ -2,6 +2,7 @@ class Game {
     constructor() {
         this.tiles = [];
         this.gameOver = false;
+        this.htmlTimeLabel = document.getElementById("time-label");
     }
 
     display() {
@@ -36,12 +37,8 @@ class Game {
 
         if (this.gameOver) this.end();
         else {
-            let elapsedTime = new Date() - this.startTime;
-            let seconds = ("0" + Math.floor((elapsedTime / 1000) % 60)).slice(-2);
-            let minutes = ("0" + Math.floor(elapsedTime / 1000 / 60)).slice(-2);
-            let hours = ("0" + Math.floor(elapsedTime / 1000 / 1000 / 60)).slice(-2);
-            this.elapsedTimeText = `${hours}:${minutes}:${seconds}`;
-            document.getElementById("time-label").innerText = this.elapsedTimeText + " Elapsed";
+            this.elapsedTimeText = this.calculateElapsedTimeText();
+            this.htmlTimeLabel.innerText = this.elapsedTimeText + " Elapsed";
         }
     }
 
@@ -67,5 +64,13 @@ class Game {
         document.getElementById("win-image-" + winMessage.toLowerCase()).style.display = "block";
         document.getElementById("game-over-label").innerText = winMessage + " is Victorius!";
         document.getElementById("game-over-time-label").innerText = "Game finished in: " + this.elapsedTimeText;
+    }
+
+    calculateElapsedTimeText() {
+        let elapsedTime = new Date() - this.startTime;
+        let seconds = ("0" + Math.floor((elapsedTime / 1000) % 60)).slice(-2);
+        let minutes = ("0" + Math.floor(elapsedTime / 1000 / 60)).slice(-2);
+        let hours = ("0" + Math.floor(elapsedTime / 1000 / 1000 / 60)).slice(-2);
+        return `${hours}:${minutes}:${seconds}`;
     }
 }

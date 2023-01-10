@@ -59,5 +59,6 @@ class Editor {
             element.style.display = "none";
         });
         document.getElementById("rock").checked = true;
+        this.selectedType = TileType.Rock;
     }
 }
