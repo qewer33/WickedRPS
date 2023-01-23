@@ -46,10 +46,10 @@
                     <img src="assets/cross-mark.png" alt="cross-mark" />
                 </label>
                 <button class="tool-button" onclick="editor.tiles = []">
-                    <img src="assets/clear.png" alt="scissors" />
+                    <img src="assets/clear.png" alt="clear" />
                 </button>
                 <button class="tool-button" onclick="editor.randomizeTiles()">
-                    <img src="assets/randomize.png" alt="scissors" />
+                    <img src="assets/randomize.png" alt="randomize" />
                 </button>
                 <!--
                 <button class="button" onclick="editor.eraser = true">Eraser</button>
@@ -57,7 +57,7 @@
                 <button class="button" onclick="editor.randomizeTiles()">Randomize</button>
                 -->
                 <div id="start-game-button-separator" class="separator"></div>
-                <button id="start-game-button" class="button" onclick="game.start()">Start Game</button>
+                <button id="start-game-button" class="button" onclick="game.toggleState()">Start Game</button>
             </div>
             <div id="timer-div">
                 <h1 id="time-label" style="font-family: 'JetBrains Mono', monospace">00:00:00 Elapsed</h1>
