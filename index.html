@@ -57,10 +57,7 @@
                 <button class="button" onclick="editor.randomizeTiles()">Randomize</button>
                 -->
                 <div id="start-game-button-separator" class="separator"></div>
-                <button class="tool-button" id="stop" onclick="game.stop()" disabled>
-                    <img src="assets/stop.png" alt="stop" />
-                </button>
-                <button id="start-game-button" class="button" onclick="game.start()">Start Game</button>
+                <button id="start-game-button" class="button" onclick="game.toggleState()">Start Game</button>
             </div>
             <div id="timer-div">
                 <h1 id="time-label" style="font-family: 'JetBrains Mono', monospace">00:00:00 Elapsed</h1>
