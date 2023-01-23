@@ -53,6 +53,7 @@ class Editor {
         this.tiles = [];
         document.getElementById("game-over-screen").style.display = "none";
         document.getElementById("toolbar").childNodes.forEach((element) => {
+            if (element.id == 'stop') { element.disabled = true; return; }
             element.disabled = false;
         });
         document.getElementById("win-images").children.forEach((element) => {

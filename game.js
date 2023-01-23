@@ -46,10 +46,18 @@ class Game {
         this.gameOver = false;
         this.tiles = editor.tiles;
         document.getElementById("toolbar").childNodes.forEach((element) => {
+            if (element.id == 'stop') { element.disabled = false; return; }
             element.disabled = true;
         });
         state = State.InGame;
         this.startTime = new Date();
+    }
+
+    stop() {
+        this.gameOver = true;
+        state = State.GameOver;
+        document.getElementById("time-label").innerText = "00:00:00 Elapsed";
+        editor.start();
     }
 
     end() {
