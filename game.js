@@ -74,7 +74,7 @@ class Game {
         if (this.winningTile == TileType.Paper) winMessage = "Paper";
         if (this.winningTile == TileType.Scissors) winMessage = "Scissors";
         document.getElementById("win-image-" + winMessage.toLowerCase()).style.display = "block";
-        document.getElementById("game-over-label").innerText = winMessage + " is Victorius!";
+        document.getElementById("game-over-label").innerText = winMessage + " is Victorious!";
         document.getElementById("game-over-time-label").innerText = "Game finished in: " + this.elapsedTimeText;
     }
 
