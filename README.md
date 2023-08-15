@@ -8,7 +8,7 @@ Play it over at: https://rps.qewer.dev
 
 WickedRPS is a simple game based off the classic "Rock Paper Scissors" game but with a twist. Instead of playing a one to one duel, you set up a battlefield and the game plays itself! The tiles move around randomly and the game rules apply (Rocks eat Scissors, Scissors eat Papers and Papers eat Rocks).
 
-This idea is not original and was shamelessly stolen from [Peter Ganunis' "Living RPS"](http://peterganunis.com/rpsite.html) I really liked the idea so I decided to make a clone of it myself (although it's technically not as good because it's lacking flocking but I'm a high school student and idk any cellular automata concepts give me a break).
+This idea is not original and was shamelessly stolen from [Peter Ganunis' "Living RPS"](http://peterganunis.com/rpsite.html) I really liked the idea so I decided to make a clone of it myself.
 
 If you like this game and like what I do over at [my website](https://qewer.dev), consider supporting me on Ko-fi!
 
